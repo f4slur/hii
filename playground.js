@@ -1,15 +1,31 @@
-/* 
-// Metacrafters - Beginning Javascript
-//
-// This is a javascript playground for testing your javascript code!
-// When you are ready to test, simply right click and select "Run Code"
-// to see the result print below. If you have more then one snippet of code,
-// you can highlight the code you want to test, and then right click and select "Run Code"
-*/
+let myNft=[];
 
-// Enter your code below this line
+function mintNft(Name,description,image) {
+    let nft={
+        Name:Name,
+        description:description,
+        image:image
+    }
+    myNft.push(nft);
+};
 
-// Code example
-for(var i=1; i<=5; i++) {
- console.log(i);
+function listNFTs() {
+    myNft.forEach((nft)=>{
+        console.log("Name:"+nft.Name);
+        console.log("DIscription:"+nft.description);
+        console.log("image:"+nft.image + "'>");
+});
+ }
+
+function getTotalSupply () {
+    console.log("Total NFT minted:"+ myNft.length);
+
 }
+mintNft('f4slu1','First ever created',"https://i0.wp.com/coolhunting.com/wp-content/uploads/2022/11/GAGAG.jpg?w=1080&ssl=1");
+mintNft("f4slu2","Second ever created","https://i0.wp.com/coolhunting.com/wp-content/uploads/2018/11/proenza.jpg?w=700&ssl=1");
+mintNft("f4slu3","Third ever Created","https://i0.wp.com/coolhunting.com/wp-content/uploads/2019/06/proenza-schouler-tie-dye-swimsuit.jpg?w=798&ssl=1");
+mintNft("f4slu4","Last one ","https://i0.wp.com/coolhunting.com/wp-content/uploads/2019/04/proenza.jpg?w=700&ssl=1");
+
+listNFTs();
+
+getTotalSupply();
